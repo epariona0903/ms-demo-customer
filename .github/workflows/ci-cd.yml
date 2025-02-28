@@ -6,9 +6,9 @@ on:
       - main
 
 env:
-  RESOURCE_GROUP: "my-resource-group"
+  RESOURCE_GROUP: "prd-devops-resourcegroup"
   AKS_CLUSTER_NAME: "my-aks-cluster"
-  ACR_NAME: "myacr"
+  ACR_NAME: "alicorpdevops"
   APP_NAME: "ms-demo-customer"
   IMAGE_TAG: "latest"
 
@@ -33,15 +33,15 @@ jobs:
       run: |
         ls -l
     
-    #- name: Login to Azure
-    #  uses: azure/login@v1
-    #  with:
-    #    creds: ${{ secrets.AZURE_CREDENTIALS }}
-    #
-    #- name: Build and push Docker image to ACR
-    #  run: |
-    #    az acr build --registry ${{ env.ACR_NAME }} --image ${{ env.APP_NAME }}:${{ env.IMAGE_TAG }} .
-    #
+    - name: Login to Azure
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    
+    - name: Build and push Docker image to ACR
+      run: |
+        az acr build --registry ${{ env.ACR_NAME }} --image ${{ env.APP_NAME }}:${{ env.IMAGE_TAG }} .
+    
     #- name: Get AKS credentials
     #  run: |
     #    az aks get-credentials --resource-group ${{ env.RESOURCE_GROUP }} --name ${{ env.AKS_CLUSTER_NAME }}
