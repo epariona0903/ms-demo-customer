@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: ms-demo-customer
-        image: myacr.azurecr.io/ms-demo-customer:latest
+        image: #ACR_NAME.azurecr.io/ms-demo-customer:#COMMIT_SHORT_SHA
         ports:
         - containerPort: 8080
         resources:
