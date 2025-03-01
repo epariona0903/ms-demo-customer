@@ -7,7 +7,7 @@ on:
 
 env:
   RESOURCE_GROUP: "prd-devops-resourcegroup"
-  AKS_CLUSTER_NAME: "my-aks-cluster"
+  AKS_CLUSTER_NAME: "devops-k8s-01"
   ACR_NAME: "alicorpdevops"
   APP_NAME: "ms-demo-customer"
   IMAGE_TAG: "latest"
