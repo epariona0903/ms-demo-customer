@@ -39,7 +39,7 @@ jobs:
     
     - name: Build and push Docker image to ACR
       run: |
-        az acr build --registry ${{ env.ACR_NAME }} --image ${{ env.APP_NAME }}:${{ env.IMAGE_TAG }} .
+        az acr build --registry ${{ env.ACR_NAME }} --image ${{ env.APP_NAME }}:${{ env.SHORT_SHA }} .
 
     - name: Update k8s-deployment.yaml with commit short SHA
       run: |
