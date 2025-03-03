@@ -78,4 +78,3 @@ spec:
                 name: ms-demo-customer
                 port:
                   number: 80
-                  
