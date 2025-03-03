@@ -65,7 +65,7 @@ metadata:
     kubernetes.io/ingress.class: nginx
 spec:
   rules:
-    - host: demo.navara.com.pe
+    - host: demo.eparionareto.duckdns.org
       http:
         paths:
           - pathType: ImplementationSpecific
