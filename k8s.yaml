@@ -65,17 +65,14 @@ metadata:
     cert-manager.io/cluster-issuer: letsencrypt-prod    
 spec:
   ingressClassName: nginx 
-  tls:
-  - hosts:
-    - epariona2025devops.zapto.org
-    secretName: secret-tls 
   rules:
-    - host: epariona2025devops.zapto.org
-      http:
-        paths:
-          - pathType: ImplementationSpecific
-            backend:
-              service:
-                name: ms-demo-customer
-                port:
-                  number: 80
+  - host: epariona2025devops.zapto.org
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: epariona2025devops.zapto.org
+            port:
+              number: 80
