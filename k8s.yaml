@@ -28,11 +28,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: hola-mundo
+  name: ms-demo-customer
 spec:
   type: ClusterIP
   ports:
   - port: 80
     targetPort: 8080
   selector:
-    app: hola-mundo
+    app: ms-demo-customer
+    
