@@ -62,10 +62,14 @@ metadata:
   name: ms-demo-customer
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
-    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: letsencrypt-prod    
 spec:
+  tls:
+  - hosts:
+    - eparionareto.duckdns.org
+    secretName: secret-tls 
   rules:
-    - host: demo.eparionareto.duckdns.org
+    - host: eparionareto.duckdns.org
       http:
         paths:
           - pathType: ImplementationSpecific
