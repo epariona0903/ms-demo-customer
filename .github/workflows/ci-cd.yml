@@ -6,9 +6,9 @@ on:
       - main
 
 env:
-  RESOURCE_GROUP: "prd-devops-resourcegroup"
-  AKS_CLUSTER_NAME: "devops-k8s-01"
-  ACR_NAME: "alicorpdevops"
+  RESOURCE_GROUP: "rsgrretodeu02"
+  AKS_CLUSTER_NAME: aksretodeastus02"
+  ACR_NAME: "acrretodeastus02"
   APP_NAME: "ms-demo-customer"
 
 jobs:
