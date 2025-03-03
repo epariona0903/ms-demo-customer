@@ -62,7 +62,6 @@ metadata:
   name: ms-demo-customer
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
-    cert-manager.io/cluster-issuer: letsencrypt-prod    
 spec:
   ingressClassName: nginx 
   rules:
@@ -73,6 +72,6 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: epariona2025devops.zapto.org
+            name: ms-demo-customer
             port:
               number: 80
