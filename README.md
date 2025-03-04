@@ -1,3 +1,3 @@
 # ms-demo-customer
 
-v1
+v1.0.0
