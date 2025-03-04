@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HomeController {
 
-    public password = "admindsadasd3434343sfdff3223"
+    public String password = "VbhpJgFkEc4rk86cpZhWKV";
         
     @GetMapping("/")
     public String helloWorld() {
