@@ -24,6 +24,20 @@ spec:
           limits:
             memory: "256Mi"
             cpu: "256m"        
+        livenessProbe:
+          httpGet:
+            path: /actuator/health/liveness  # Ruta para verificar el estado de la aplicación
+            port: 8080
+          initialDelaySeconds: 10  # Tiempo de espera antes de iniciar la verificación
+          periodSeconds: 5         # Intervalo entre verificaciones
+          failureThreshold: 3      # Número de fallos permitidos antes de reiniciar
+        readinessProbe:
+          httpGet:
+            path: /actuator/health/readiness    # Ruta para verificar si la aplicación está lista
+            port: 8080
+          initialDelaySeconds: 5   # Tiempo de espera antes de iniciar la verificación
+          periodSeconds: 5        # Intervalo entre verificaciones
+          failureThreshold: 3     # Número de fallos permitidos antes de marcar como no listo
 ---
 apiVersion: v1
 kind: Service
