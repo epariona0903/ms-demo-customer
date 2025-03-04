@@ -65,13 +65,12 @@ metadata:
 spec:
   ingressClassName: nginx 
   rules:
-  - host: epariona2025devops.zapto.org
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: ms-demo-customer
-            port:
-              number: 80
+    - http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: ms-demo-customer
+                port:
+                  number: 80
